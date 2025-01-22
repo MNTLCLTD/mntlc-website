@@ -2,6 +2,10 @@
 
 The official website for Mentalic Group Ltd, built with modern web technologies. Visit us at [mentalic.ltd](https://mentalic.ltd).
 
+## Status
+
+[![Deploy to GitHub Pages](https://github.com/cbarlgit/mentalic-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/cbarlgit/mentalic-website/actions/workflows/deploy.yml)
+
 ## Tech Stack
 
 - **Framework**: Next.js 14
