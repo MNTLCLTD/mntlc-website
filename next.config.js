@@ -4,8 +4,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: '/mentalic-website/',
-  basePath: '/mentalic-website',
   trailingSlash: true,
 }
 

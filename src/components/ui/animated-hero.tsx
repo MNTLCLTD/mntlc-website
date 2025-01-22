@@ -26,10 +26,10 @@ export function Hero() {
 
   return (
     <div className="w-full min-h-screen flex items-center">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-8 sm:px-12 md:px-16 lg:px-8">
         <div className="flex gap-8 items-center justify-center flex-col">
           <div className="flex gap-4 flex-col">
-            <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
               <span className="text-brand-dark dark:text-brand-light">Building for</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;

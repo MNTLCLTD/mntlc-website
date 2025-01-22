@@ -1,4 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mentalic Website
+
+The official website for Mentalic Group Ltd, built with modern web technologies. Visit us at [mentalic.ltd](https://mentalic.ltd).
+
+## Tech Stack
+
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Deployment**: GitHub Pages
+- **Icons**: Lucide Icons
+- **Font**: Geist
+
+## Development
+
+```bash
+# Clone the repository
+git clone https://github.com/cbarlgit/mentalic-website.git
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to see the result.
+
+## Features
+
+- 🌓 Dark mode support
+- 🎨 Modern, minimalist design
+- 📱 Fully responsive
+- ⚡️ Fast page loads
+- 🔄 Smooth animations
+- 🌐 Custom domain with SSL
+
+## Project Structure
+
+```
+├── public/          # Static assets
+├── src/
+│   ├── app/         # App router pages
+│   └── components/  # React components
+│       └── ui/      # Reusable UI components
+```
+
+## License
+
+Copyright (c) 2024 Mentalic Group Ltd. All rights reserved.
+
+## Deployment
+
+The site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the main branch.
+
+Visit the live site at: https://cbarlgit.github.io/mentalic-website/
 
 ## Getting Started
 

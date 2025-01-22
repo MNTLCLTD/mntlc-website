@@ -14,7 +14,7 @@ import { Linkedin, Send, Twitter } from "lucide-react"
 function Footerdemo() {
   return (
     <footer className="relative border-t border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/50 dark:bg-brand-dark/50 backdrop-blur-sm text-brand-text dark:text-brand-light transition-colors duration-300">
-      <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
+      <div className="container mx-auto px-8 sm:px-12 md:px-16 lg:px-8 py-12">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           <div className="relative">
             <h2 className="mb-4 text-3xl font-bold tracking-tight">Stay Connected</h2>
