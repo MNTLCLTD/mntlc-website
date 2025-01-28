@@ -13,9 +13,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: 'Mentalic',
-  description: 'Building for Human Potential',
+export const metadata: Metadata = {
+  metadataBase: new URL('https://mentalic.ltd'),
+  title: {
+    default: 'Mentalic - Building for Human Potential',
+    template: '%s | Mentalic'
+  },
+  description: 'Mentalic is redefining the software landscape for the AI era, creating transformative solutions that empower self-discovery, growth, and innovation.',
+  keywords: ['AI', 'Mental Health', 'Innovation', 'Healthcare Technology', 'Human Potential', 'Software Development', 'Artificial Intelligence'],
+  authors: [{ name: 'Mentalic Group Ltd' }],
+  creator: 'Mentalic Group Ltd',
+  publisher: 'Mentalic Group Ltd',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -32,6 +45,41 @@ export const metadata = {
       },
     ],
   },
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: 'https://mentalic.ltd',
+    siteName: 'Mentalic',
+    title: 'Mentalic - Building for Human Potential',
+    description: 'Transforming mental healthcare through AI-driven innovation and personalized solutions.',
+    images: [
+      {
+        url: '/share.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Mentalic - Building for Human Potential',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mentalic - Building for Human Potential',
+    description: 'Transforming mental healthcare through AI-driven innovation and personalized solutions.',
+    images: ['/share.svg'],
+    creator: '@mentalic',
+    site: '@mentalic',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function RootLayout({
@@ -42,7 +90,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Favicon metadata */}
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-brand-light dark:bg-brand-dark min-h-screen`}
