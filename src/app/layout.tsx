@@ -31,17 +31,17 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: 'https://mentalic.ltd/favicon.ico', rel: 'icon' },
+      { url: 'https://mentalic.ltd/favicon.svg', type: 'image/svg+xml', rel: 'icon' },
+      { url: 'https://mentalic.ltd/favicon-96x96.png', sizes: '96x96', type: 'image/png', rel: 'icon' },
     ],
     apple: [
-      { url: '/apple-touch-icon.png' },
+      { url: 'https://mentalic.ltd/apple-touch-icon.png' },
     ],
     other: [
       {
         rel: 'manifest',
-        url: '/site.webmanifest',
+        url: 'https://mentalic.ltd/site.webmanifest',
       },
     ],
   },
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description: 'Transforming mental healthcare through AI-driven innovation and personalized solutions.',
     images: [
       {
-        url: '/share.svg',
+        url: 'https://mentalic.ltd/share.svg',
         width: 1200,
         height: 630,
         alt: 'Mentalic - Building for Human Potential',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Mentalic - Building for Human Potential',
     description: 'Transforming mental healthcare through AI-driven innovation and personalized solutions.',
-    images: ['/share.svg'],
+    images: ['https://mentalic.ltd/share.svg'],
     creator: '@mentalic',
     site: '@mentalic',
   },
@@ -93,6 +93,7 @@ export default function RootLayout({
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="icon" href="https://mentalic.ltd/favicon.ico" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-brand-light dark:bg-brand-dark min-h-screen`}
