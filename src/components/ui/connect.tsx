@@ -133,13 +133,13 @@ export function Connect() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       <Link
-                        href={"mailto:contact@mentalic.ai"}
+                        href={"mailto:charlie@mentalic.ltd"}
                         target="_blank"
                       >
                         <Button>Contact Us</Button>
                       </Link>
                       <Link
-                        href="https://www.linkedin.com/company/mentalic"
+                        href="https://www.linkedin.com/company/93088706"
                         target="_blank"
                         className={cn(
                           buttonVariants({

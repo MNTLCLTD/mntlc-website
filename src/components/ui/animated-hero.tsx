@@ -79,7 +79,7 @@ export function Hero() {
                 <span className="sr-only">WhatsApp</span>
               </Button>
             </Link>
-            <Link href="https://www.linkedin.com/in/charlie-jsb/" target="_blank">
+            <Link href="https://www.linkedin.com/company/93088706" target="_blank">
               <Button 
                 variant="outline" 
                 size="icon" 
@@ -89,7 +89,7 @@ export function Hero() {
                 <span className="sr-only">LinkedIn</span>
               </Button>
             </Link>
-            <a href="mailto:contact@mentalic.ltd">
+            <a href="mailto:charlie@mentalic.ltd">
               <Button 
                 variant="outline" 
                 size="icon" 

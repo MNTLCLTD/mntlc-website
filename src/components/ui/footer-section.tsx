@@ -54,7 +54,7 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <a href="https://www.linkedin.com/in/charlie-jsb/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/company/93088706" target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="icon" className="rounded-full border-brand-primary/20 hover:bg-brand-primary/10">
                         <Linkedin className="h-4 w-4" />
                         <span className="sr-only">LinkedIn</span>
