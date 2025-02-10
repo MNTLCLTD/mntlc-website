@@ -119,7 +119,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="relative h-[500px] rounded-xl border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 backdrop-blur-sm p-4 transition-all duration-300 hover:border-brand-primary/20 hover:bg-brand-primary/[0.02] group">
+              <div className="relative rounded-xl border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 backdrop-blur-sm p-4 transition-all duration-300 hover:border-brand-primary/20 hover:bg-brand-primary/[0.02] group">
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
                 <IconCloud iconSlugs={techSlugs} />
               </div>
