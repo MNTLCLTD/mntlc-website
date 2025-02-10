@@ -31,19 +31,20 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png' },
-    ],
-    other: [
       {
-        rel: 'manifest',
-        url: '/site.webmanifest',
-      },
+        url: '/icon.png',
+        sizes: '32x32',
+        type: 'image/png',
+      }
     ],
+    shortcut: { url: '/favicon.ico' },
+    apple: [
+      {
+        url: '/apple-touch-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      }
+    ]
   },
   openGraph: {
     type: 'website',
@@ -93,7 +94,6 @@ export default function RootLayout({
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="icon" href="/favicon.ico" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-brand-light dark:bg-brand-dark min-h-screen`}
