@@ -4,6 +4,8 @@ import * as React from "react"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { cn } from "@/lib/utils"
 
 const navItems = [
   {
@@ -23,6 +25,7 @@ const navItems = [
 export function MobileNav() {
   const [isOpen, setIsOpen] = React.useState(false)
   const [activeSection, setActiveSection] = React.useState<string>("")
+  const [hasScrolled, setHasScrolled] = React.useState(false)
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +42,7 @@ export function MobileNav() {
       }, "")
 
       setActiveSection(currentSection)
+      setHasScrolled(window.scrollY > 10)
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -47,7 +51,6 @@ export function MobileNav() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
-    // Prevent scrolling when menu is open
     document.body.style.overflow = !isOpen ? 'hidden' : 'unset'
   }
 
@@ -61,74 +64,61 @@ export function MobileNav() {
 
   return (
     <>
-      <Button
-        variant="ghost"
-        size="icon"
-        className="fixed top-4 right-4 z-50 md:hidden h-10 w-10 rounded-full border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 backdrop-blur-sm"
-        onClick={toggleMenu}
-        aria-label={isOpen ? "Close menu" : "Open menu"}
+      <motion.div 
+        className="fixed top-0 left-0 right-0 z-50 md:hidden"
+        animate={{
+          backgroundColor: hasScrolled ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0)',
+          backdropFilter: hasScrolled ? 'blur(10px)' : 'blur(0px)',
+        }}
+        transition={{ duration: 0.2 }}
       >
-        {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-      </Button>
+        <div className="flex items-center justify-between p-4">
+          <Link 
+            href="/" 
+            className="text-xl font-bold text-brand-dark dark:text-brand-light hover:text-brand-primary transition-colors"
+          >
+            Mentalic
+          </Link>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="relative z-50"
+            onClick={toggleMenu}
+          >
+            {isOpen ? <X /> : <Menu />}
+          </Button>
+        </div>
+      </motion.div>
 
       <AnimatePresence>
         {isOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
-              onClick={toggleMenu}
-            />
-
-            {/* Menu */}
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 20, stiffness: 300 }}
-              className="fixed right-0 top-0 bottom-0 z-50 w-[280px] bg-brand-light/90 dark:bg-brand-dark/90 backdrop-blur-md md:hidden"
-            >
-              <nav className="flex h-full flex-col">
-                <div className="flex-1 overflow-y-auto py-20 px-6">
-                  <ul className="space-y-2">
-                    {navItems.map((item) => (
-                      <motion.li
-                        key={item.href}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.1 }}
-                      >
-                        <button
-                          onClick={() => handleNavClick(item.href)}
-                          className={`group relative w-full rounded-lg px-4 py-3 text-left text-sm transition-colors ${
-                            activeSection === item.href.slice(1)
-                              ? "text-brand-primary"
-                              : "text-brand-text/60 dark:text-brand-muted/60"
-                          }`}
-                        >
-                          {activeSection === item.href.slice(1) && (
-                            <motion.div
-                              layoutId="activeSection-mobile"
-                              className="absolute inset-0 rounded-lg bg-brand-primary/10"
-                              transition={{
-                                type: "spring",
-                                stiffness: 380,
-                                damping: 30,
-                              }}
-                            />
-                          )}
-                          <span className="relative z-10">{item.name}</span>
-                        </button>
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-              </nav>
-            </motion.div>
-          </>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-40 bg-brand-light/80 dark:bg-brand-dark/80 backdrop-blur-sm pt-20"
+          >
+            <nav className="flex flex-col items-center justify-center h-full gap-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "text-lg font-medium text-brand-text dark:text-brand-muted transition-colors hover:text-brand-dark dark:hover:text-brand-light",
+                    activeSection === item.href.slice(1) &&
+                      "text-brand-dark dark:text-brand-light"
+                  )}
+                  onClick={() => {
+                    setIsOpen(false)
+                    handleNavClick(item.href)
+                  }}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </motion.div>
         )}
       </AnimatePresence>
     </>
