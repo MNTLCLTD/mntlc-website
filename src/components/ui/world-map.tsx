@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import DottedMap from "dotted-map";
 import Image from "next/image";
@@ -19,16 +19,19 @@ export function WorldMap({
   lineColor = "#0ea5e9",
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
-  const map = new DottedMap({ height: 100, grid: "diagonal" });
-
+  const [svgMap, setSvgMap] = useState<string>("");
   const { theme } = useTheme();
 
-  const svgMap = map.getSVG({
-    radius: 0.22,
-    color: theme === "dark" ? "#FFFFFF20" : "#00000020",
-    shape: "circle",
-    backgroundColor: "transparent",
-  });
+  useEffect(() => {
+    const map = new DottedMap({ height: 100, grid: "diagonal" });
+    const svg = map.getSVG({
+      radius: 0.22,
+      color: theme === "dark" ? "#FFFFFF20" : "#00000020",
+      shape: "circle",
+      backgroundColor: "transparent",
+    });
+    setSvgMap(svg);
+  }, [theme]);
 
   const projectPoint = (lat: number, lng: number) => {
     const x = (lng + 180) * (800 / 360);
@@ -45,15 +48,20 @@ export function WorldMap({
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
   };
 
+  if (!svgMap) {
+    return null;
+  }
+
   return (
     <div className="w-full aspect-[2/1] relative font-sans">
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent_0%,white_25%,white_75%,transparent_100%)] pointer-events-none select-none opacity-75"
         alt="world map"
-        height="495"
-        width="1056"
+        height={495}
+        width={1056}
         draggable={false}
+        priority
       />
       <svg
         ref={svgRef}

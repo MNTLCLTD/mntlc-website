@@ -4,12 +4,13 @@ import { FlickeringGrid } from "@/components/ui/flickering-grid";
 import { Hero } from "@/components/ui/animated-hero";
 import { IconCloud } from "@/components/ui/interactive-icon-cloud";
 import { Footerdemo } from "@/components/ui/footer-section";
-// Commented out sections
-// import { FeaturesSectionWithHoverEffects } from "@/components/ui/feature-section-with-hover-effects";
-// import { WorldMapDemo } from "@/components/ui/world-map-demo";
-// import { FocusAreas } from "@/components/ui/focus-areas";
+import { WorldMapDemo } from "@/components/ui/world-map-demo";
+import { FocusAreas } from "@/components/ui/focus-areas";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { NavMenu } from "@/components/ui/nav-menu";
+import { MobileNav } from "@/components/ui/mobile-nav";
 
-// Keeping tech slugs for future use
+// Tech stack for the IconCloud
 const techSlugs = [
   "typescript",
   "nextdotjs",
@@ -44,72 +45,93 @@ export default function HomePage() {
         />
       </div>
 
+      {/* Navigation */}
+      <NavMenu />
+      <MobileNav />
+
       {/* Content */}
       <div className="relative z-10">
         {/* Hero Section */}
         <Hero />
         
-        {/* Spacer to push footer down */}
-        <div className="h-[0vh]" />
+        {/* Focus Areas Section */}
+        <div className="mt-20 scroll-mt-20" id="focus-areas">
+          <FocusAreas />
+        </div>
 
-        {/* Commented out sections */}
-        {/* Global Reach Section
-        <WorldMapDemo />
+        {/* Global Reach Section */}
+        <div className="mt-20 scroll-mt-20" id="global-reach">
+          <WorldMapDemo />
+        </div>
 
-        Focus Areas Section
-        <FocusAreas />
-
-        Features Section
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-brand-dark dark:text-brand-light">
-              Why Choose Mentalic
-            </h2>
-            <FeaturesSectionWithHoverEffects />
-          </div>
-        </section>
-
-        Technology Section
-        <section className="pb-80 pt-20 px-4">
+        {/* Technology Section */}
+        <section className="mt-20 scroll-mt-20 pb-40 px-4 bg-gradient-to-b from-transparent via-brand-dark/[0.2] to-transparent dark:via-brand-dark/[0.4]" id="technology">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="group">
+                <div className="inline-flex items-center gap-2 text-sm font-medium text-brand-primary/80 mb-4">
+                  <span className="rounded-full bg-brand-primary/10 px-3 py-1">Tech Stack</span>
+                </div>
                 <h2 className="text-3xl font-bold mb-6 text-brand-dark dark:text-brand-light">
                   Built with Cutting-Edge Technology
                 </h2>
                 <div className="space-y-6">
                   <p className="text-lg text-brand-text dark:text-brand-muted">
-                    At Mentalic, we push boundaries by combining state-of-the-art tech and AI-focused practices to deliver robust, scalable solutions.
+                    At Mentalic, we push boundaries by combining state-of-the-art tech and AI-focused practices to deliver robust, scalable solutions at unprecedented speed.
                   </p>
-                  <ul className="space-y-4 text-brand-text dark:text-brand-muted">
-                    <li className="flex items-start gap-2">
-                      <span className="text-brand-success">✓</span>
-                      <span>AI-Powered Development Pipeline for rapid iteration</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-brand-success">✓</span>
-                      <span>Cloud-Native Architecture ensuring reliability and effortless scalability</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-brand-success">✓</span>
-                      <span>Advanced Machine Learning models for highly personalized experiences</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-brand-success">✓</span>
-                      <span>Real-Time Data Processing providing immediate, actionable insights</span>
-                    </li>
-                  </ul>
+                  <div className="grid gap-4">
+                    <div className="group rounded-lg border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 p-4 transition-all duration-300 hover:border-brand-primary/20 hover:bg-brand-primary/[0.02] hover:translate-x-1">
+                      <div className="flex items-start gap-3">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary/20 transition-colors">✓</span>
+                        <div>
+                          <h3 className="font-semibold text-brand-dark dark:text-brand-light group-hover:text-brand-primary transition-colors">AI-Powered Development Pipeline</h3>
+                          <p className="text-sm text-brand-text dark:text-brand-muted">Achieve 10x faster iteration through intelligent automation and AI assistance</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="group rounded-lg border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 p-4 transition-all duration-300 hover:border-brand-primary/20 hover:bg-brand-primary/[0.02] hover:translate-x-1">
+                      <div className="flex items-start gap-3">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary/20 transition-colors">✓</span>
+                        <div>
+                          <h3 className="font-semibold text-brand-dark dark:text-brand-light group-hover:text-brand-primary transition-colors">Context-Aware Architecture</h3>
+                          <p className="text-sm text-brand-text dark:text-brand-muted">Maximize AI potential with intelligent context management and processing</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="group rounded-lg border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 p-4 transition-all duration-300 hover:border-brand-primary/20 hover:bg-brand-primary/[0.02] hover:translate-x-1">
+                      <div className="flex items-start gap-3">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary/20 transition-colors">✓</span>
+                        <div>
+                          <h3 className="font-semibold text-brand-dark dark:text-brand-light group-hover:text-brand-primary transition-colors">Advanced Agent Orchestration</h3>
+                          <p className="text-sm text-brand-text dark:text-brand-muted">Seamlessly coordinate AI agents for complex automated workflows</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="group rounded-lg border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 p-4 transition-all duration-300 hover:border-brand-primary/20 hover:bg-brand-primary/[0.02] hover:translate-x-1">
+                      <div className="flex items-start gap-3">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary/20 transition-colors">✓</span>
+                        <div>
+                          <h3 className="font-semibold text-brand-dark dark:text-brand-light group-hover:text-brand-primary transition-colors">Rapid Prototyping Pipeline</h3>
+                          <p className="text-sm text-brand-text dark:text-brand-muted">From concept to production with unprecedented speed and reliability</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="relative h-[400px]">
+              <div className="relative h-[500px] rounded-xl border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 backdrop-blur-sm p-4 transition-all duration-300 hover:border-brand-primary/20 hover:bg-brand-primary/[0.02] group">
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
                 <IconCloud iconSlugs={techSlugs} />
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Footer */}
         <Footerdemo />
+
+        {/* Scroll to Top Button */}
+        <ScrollToTop />
       </div>
     </div>
   );

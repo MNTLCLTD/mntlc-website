@@ -16,34 +16,34 @@ export function Connect() {
     animate(
       [
         ["#pointer", { left: 200, top: 60 }, { duration: 0 }],
-        ["#ai-research", { opacity: 1 }, { duration: 0.3 }],
+        ["#prompt-eng", { opacity: 1 }, { duration: 0.3 }],
         [
           "#pointer",
           { left: 50, top: 102 },
           { at: "+0.5", duration: 0.5, ease: "easeInOut" },
         ],
-        ["#ai-research", { opacity: 0.4 }, { at: "-0.3", duration: 0.1 }],
-        ["#mental-health", { opacity: 1 }, { duration: 0.3 }],
+        ["#prompt-eng", { opacity: 0.4 }, { at: "-0.3", duration: 0.1 }],
+        ["#agent-orch", { opacity: 1 }, { duration: 0.3 }],
         [
           "#pointer",
           { left: 224, top: 170 },
           { at: "+0.5", duration: 0.5, ease: "easeInOut" },
         ],
-        ["#mental-health", { opacity: 0.4 }, { at: "-0.3", duration: 0.1 }],
-        ["#accessibility", { opacity: 1 }, { duration: 0.3 }],
+        ["#agent-orch", { opacity: 0.4 }, { at: "-0.3", duration: 0.1 }],
+        ["#ux-design", { opacity: 1 }, { duration: 0.3 }],
         [
           "#pointer",
           { left: 88, top: 198 },
           { at: "+0.5", duration: 0.5, ease: "easeInOut" },
         ],
-        ["#accessibility", { opacity: 0.4 }, { at: "-0.3", duration: 0.1 }],
-        ["#privacy", { opacity: 1 }, { duration: 0.3 }],
+        ["#ux-design", { opacity: 0.4 }, { at: "-0.3", duration: 0.1 }],
+        ["#creative", { opacity: 1 }, { duration: 0.3 }],
         [
           "#pointer",
           { left: 200, top: 60 },
           { at: "+0.5", duration: 0.5, ease: "easeInOut" },
         ],
-        ["#privacy", { opacity: 0.5 }, { at: "-0.3", duration: 0.1 }],
+        ["#creative", { opacity: 0.5 }, { at: "-0.3", duration: 0.1 }],
       ],
       {
         repeat: Number.POSITIVE_INFINITY,
@@ -52,7 +52,7 @@ export function Connect() {
   }, [animate]);
 
   return (
-    <section className="relative mx-auto mb-20 mt-6 max-w-5xl">
+    <section id="careers" className="relative mx-auto mb-20 mt-6 max-w-5xl">
       <HighlightGroup className="group h-full">
         <div
           className="group/item h-full md:col-span-6 lg:col-span-12"
@@ -74,28 +74,28 @@ export function Connect() {
                   >
                     <Brain className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 text-brand-primary" />
                     <div
-                      id="privacy"
+                      id="creative"
                       className="absolute bottom-12 left-14 rounded-3xl border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 backdrop-blur-sm px-2 py-1.5 text-xs opacity-50"
                     >
-                      Privacy & Security
+                      Creative Background
                     </div>
                     <div
-                      id="mental-health"
+                      id="agent-orch"
                       className="absolute left-2 top-20 rounded-3xl border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 backdrop-blur-sm px-2 py-1.5 text-xs opacity-50"
                     >
-                      Mental Health
+                      Agent Orchestration
                     </div>
                     <div
-                      id="accessibility"
+                      id="ux-design"
                       className="absolute bottom-20 right-1 rounded-3xl border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 backdrop-blur-sm px-2 py-1.5 text-xs opacity-50"
                     >
-                      Global Accessibility
+                      UX Design
                     </div>
                     <div
-                      id="ai-research"
+                      id="prompt-eng"
                       className="absolute right-12 top-10 rounded-3xl border border-brand-light/10 dark:border-brand-dark/10 bg-brand-light/5 dark:bg-brand-dark/5 backdrop-blur-sm px-2 py-1.5 text-xs opacity-50"
                     >
-                      AI Research
+                      Prompt Engineering
                     </div>
 
                     <div id="pointer" className="absolute">
@@ -115,7 +115,7 @@ export function Connect() {
                         />
                       </svg>
                       <span className="bg-brand-primary relative -top-1 left-3 rounded-3xl px-2 py-1 text-xs text-white">
-                        Focus
+                        Skills
                       </span>
                     </div>
                   </div>
@@ -124,19 +124,19 @@ export function Connect() {
                     <div className="flex flex-col items-center">
                       <h3 className="mt-6 pb-1 font-bold">
                         <span className="text-2xl md:text-4xl">
-                          Want to learn more about Mentalic?
+                          Join Our Elite Team
                         </span>
                       </h3>
                     </div>
                     <p className="mb-4 text-brand-text dark:text-brand-muted">
-                      Get in touch with our team to discuss how we can help transform mental healthcare.
+                      We're seeking exceptional polymaths who can navigate the intersection of AI and human creativity. Work on groundbreaking projects with unprecedented autonomy and impact.
                     </p>
                     <div className="flex flex-wrap gap-2">
                       <Link
                         href={"mailto:charlie@mentalic.ltd"}
                         target="_blank"
                       >
-                        <Button>Contact Us</Button>
+                        <Button>Apply Now</Button>
                       </Link>
                       <Link
                         href="https://www.linkedin.com/company/93088706"
