@@ -7,7 +7,7 @@ export function WorldMapDemo() {
     <div className="py-20 w-full relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent dark:via-black/[0.02]" />
       <div className="max-w-7xl mx-auto text-center relative">
-        <p className="font-bold text-xl md:text-4xl text-brand-dark dark:text-brand-light">
+        {/* <p className="font-bold text-xl md:text-4xl text-brand-dark dark:text-brand-light">
           Global{" "}
           <span className="text-brand-primary/60">
             {"Development".split("").map((word, idx) => (
@@ -22,20 +22,16 @@ export function WorldMapDemo() {
               </motion.span>
             ))}
           </span>
-        </p>
+        </p> */}
         <p className="text-sm md:text-lg text-brand-text dark:text-brand-muted max-w-2xl mx-auto py-4">
           Leveraging AI to coordinate development across time zones. Building and deploying enterprise solutions with unprecedented speed and efficiency.
         </p>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mt-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-8 mb-16">
           <div className="flex flex-col items-center">
             <span className="text-4xl font-bold text-brand-primary">10x</span>
             <span className="text-sm text-brand-text dark:text-brand-muted mt-2">Faster Development</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold text-brand-primary">&lt;10</span>
-            <span className="text-sm text-brand-text dark:text-brand-muted mt-2">Team Members</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="text-4xl font-bold text-brand-primary">24/7</span>

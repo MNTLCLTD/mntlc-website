@@ -9,6 +9,7 @@ import { FocusAreas } from "@/components/ui/focus-areas";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { NavMenu } from "@/components/ui/nav-menu";
 import { MobileNav } from "@/components/ui/mobile-nav";
+import Link from "next/link";
 
 // Tech stack for the IconCloud
 const techSlugs = [
@@ -47,9 +48,19 @@ export default function HomePage() {
         />
       </div>
 
+      {/* Simple Header */}
+      <div className="fixed top-0 left-0 right-0 z-50 px-8 py-4">
+        <Link 
+          href="/" 
+          className="text-xl font-bold text-brand-dark dark:text-brand-light hover:text-brand-primary transition-colors"
+        >
+          Mentalic
+        </Link>
+      </div>
+
       {/* Navigation */}
-      <NavMenu />
-      <MobileNav />
+      {/* <NavMenu />
+      <MobileNav /> */}
 
       {/* Content */}
       <div className="relative z-10">
@@ -57,17 +68,17 @@ export default function HomePage() {
         <Hero />
         
         {/* Focus Areas Section */}
-        <div className="mt-20 scroll-mt-20" id="focus-areas">
+        {/* <div className="mt-20 scroll-mt-20" id="focus-areas">
           <FocusAreas />
-        </div>
+        </div> */}
 
         {/* Global Reach Section */}
-        <div className="mt-20 scroll-mt-20" id="global-reach">
+        {/* <div className="mt-20 scroll-mt-20" id="global-reach">
           <WorldMapDemo />
-        </div>
+        </div> */}
 
         {/* Technology Section */}
-        <section className="mt-20 scroll-mt-20 pb-40 px-4 bg-gradient-to-b from-transparent via-brand-dark/[0.2] to-transparent dark:via-brand-dark/[0.4]" id="technology">
+        {/* <section className="mt-20 scroll-mt-20 pb-40 px-4 bg-gradient-to-b from-transparent via-brand-dark/[0.2] to-transparent dark:via-brand-dark/[0.4]" id="technology">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="group">
@@ -129,7 +140,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Footer */}
         <Footerdemo />
