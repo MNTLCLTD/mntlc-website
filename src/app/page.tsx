@@ -9,6 +9,7 @@ import { FocusAreas } from "@/components/ui/focus-areas";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { NavMenu } from "@/components/ui/nav-menu";
 import { MobileNav } from "@/components/ui/mobile-nav";
+import { ContactSection } from "@/components/ui/contact-section";
 import Link from "next/link";
 
 // Tech stack for the IconCloud
@@ -67,6 +68,9 @@ export default function HomePage() {
         {/* Hero Section */}
         <Hero />
         
+        {/* Contact Section */}
+        <ContactSection />
+
         {/* Focus Areas Section */}
         {/* <div className="mt-20 scroll-mt-20" id="focus-areas">
           <FocusAreas />
