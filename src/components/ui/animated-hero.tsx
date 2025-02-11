@@ -12,9 +12,16 @@ export function Hero() {
     () => [
       "Healthcare",
       "Finance",
-      "Legal Tech",
+      "Law",
       "Enterprise",
-      "Research"
+      "Research",
+      "Transport",
+      "Energy",
+      "Entertainment",
+      "Education",
+      "Government",
+      "Retail",
+      "Manufacturing"
     ],
     []
   );
@@ -36,7 +43,7 @@ export function Hero() {
         <div className="flex gap-8 items-center justify-center flex-col">
           <div className="flex gap-4 flex-col">            
             <h1 className="text-4xl sm:text-5xl md:text-7xl max-w-3xl tracking-tighter text-center font-regular">
-              <span className="text-brand-dark dark:text-brand-light">AI-Powered Solutions for</span>
+              <span className="text-brand-dark dark:text-brand-light">AI-First Solutions for</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
                 {verticals.map((vertical, index) => (
@@ -96,7 +103,7 @@ export function Hero() {
                 <span className="sr-only">LinkedIn</span>
               </Button>
             </Link>
-            <a href="mailto:charlie@mentalic.ltd">
+            <a href="mailto:contact@mentalic.ltd">
               <Button 
                 variant="outline" 
                 size="icon" 

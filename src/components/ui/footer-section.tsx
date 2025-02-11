@@ -10,6 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { Linkedin, Send, Mail } from "lucide-react"
+import { LegalDialog } from "@/components/ui/legal-dialog"
 
 function Footerdemo() {
   const [email, setEmail] = React.useState("")
@@ -106,13 +107,13 @@ function Footerdemo() {
             </div>
             <div className="space-y-3">
               <a 
-                href="mailto:charlie@mentalic.ltd"
+                href="mailto:contact@mentalic.ltd"
                 className="inline-flex items-center text-sm text-brand-text dark:text-brand-muted hover:text-brand-primary transition-colors group"
               >
                 <span className="flex h-8 w-8 items-center justify-center rounded-full border border-brand-primary/20 bg-brand-light/5 dark:bg-brand-dark/5 group-hover:bg-brand-primary/10 transition-colors mr-2">
                   <Mail className="h-4 w-4" />
                 </span>
-                charlie@mentalic.ltd
+                contact@mentalic.ltd
               </a>
               <br />
               <a 
@@ -165,12 +166,22 @@ function Footerdemo() {
             <p className="mt-1">Company number: 14674642</p>
           </div>
           <nav className="flex gap-6 text-sm">
-            <a href="#" className="text-brand-text/60 dark:text-brand-muted/60 transition-colors hover:text-brand-primary">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-brand-text/60 dark:text-brand-muted/60 transition-colors hover:text-brand-primary">
-              Terms of Service
-            </a>
+            <LegalDialog 
+              type="privacy" 
+              trigger={
+                <button className="text-brand-text/60 dark:text-brand-muted/60 transition-colors hover:text-brand-primary">
+                  Privacy Policy
+                </button>
+              }
+            />
+            <LegalDialog 
+              type="terms"
+              trigger={
+                <button className="text-brand-text/60 dark:text-brand-muted/60 transition-colors hover:text-brand-primary">
+                  Terms of Service
+                </button>
+              }
+            />
           </nav>
         </div>
       </div>
