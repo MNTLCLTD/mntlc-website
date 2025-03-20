@@ -14,16 +14,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mentalic.ltd'),
+  metadataBase: new URL('https://mntlc.ltd'),
   title: {
-    default: 'Mentalic - Building for Human Potential',
-    template: '%s | Mentalic'
+    default: 'Mental Tender Loving Care',
+    template: '%s | Mental Tender Loving Care'
   },
-  description: 'Mentalic is redefining the software landscape for the AI era, creating transformative solutions that empower self-discovery, growth, and innovation.',
-  keywords: ['AI', 'Mental Health', 'Innovation', 'Healthcare Technology', 'Human Potential', 'Software Development', 'Artificial Intelligence'],
-  authors: [{ name: 'Mentalic Group Ltd' }],
-  creator: 'Mentalic Group Ltd',
-  publisher: 'Mentalic Group Ltd',
+  description: 'MNTLC is redefining the software landscape for the AI era, creating transformative solutions that empower individuals and organizations through vertical-specific applications.',
+  keywords: ['AI', 'Autonomous Production Units', 'Innovation', 'Vertical Solutions', 'Human Potential', 'Software Development', 'Artificial Intelligence'],
+  authors: [{ name: 'MNTLC Group Ltd' }],
+  creator: 'MNTLC Group Ltd',
+  publisher: 'MNTLC Group Ltd',
   formatDetection: {
     email: false,
     address: false,
@@ -32,12 +32,16 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+      {
         url: '/icon.png',
         sizes: '32x32',
         type: 'image/png',
       }
     ],
-    shortcut: { url: '/favicon.ico' },
+    shortcut: { url: '/icon.png' },
     apple: [
       {
         url: '/apple-touch-icon.png',
@@ -49,26 +53,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://mentalic.ltd',
-    siteName: 'Mentalic',
-    title: 'Mentalic - Building for Human Potential',
-    description: 'Transforming mental healthcare through AI-driven innovation and personalized solutions.',
+    url: 'https://mntlc.ltd',
+    siteName: 'Mental Tender Loving Care',
+    title: 'Mental Tender Loving Care',
+    description: 'Transforming industries through AI-powered vertical-specific solutions and autonomous production units.',
     images: [
       {
-        url: '/share.svg',
+        url: '/icon.png',
         width: 1200,
-        height: 630,
-        alt: 'Mentalic - Building for Human Potential',
+        height: 1200,
+        alt: 'Mental Tender Loving Care',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mentalic - Building for Human Potential',
-    description: 'Transforming mental healthcare through AI-driven innovation and personalized solutions.',
-    images: ['/share.svg'],
-    creator: '@mentalic',
-    site: '@mentalic',
+    title: 'Mental Tender Loving Care',
+    description: 'Transforming industries through AI-powered vertical-specific solutions and autonomous production units.',
+    images: ['/icon.png'],
+    creator: '@mntlc',
+    site: '@mntlc',
   },
   robots: {
     index: true,

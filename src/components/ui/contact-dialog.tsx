@@ -40,7 +40,7 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
             Contact us
           </DialogTitle>
           <DialogDescription className="mt-2 text-base text-gray-600">
-            Share your vision with us, and let's explore how we can transform your expertise into groundbreaking products.
+            Join us in revolutionizing how technology empowers individuals and organizations. Our AI-enhanced autonomous production units are ready to transform your domain expertise into groundbreaking solutions.
           </DialogDescription>
         </DialogHeader>
         <div className="relative px-8 py-6 bg-gray-50 text-gray-900">

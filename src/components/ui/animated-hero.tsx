@@ -43,7 +43,7 @@ export function Hero() {
         <div className="flex gap-8 items-center justify-center flex-col">
           <div className="flex gap-4 flex-col">            
             <h1 className="text-4xl sm:text-5xl md:text-7xl max-w-3xl tracking-tighter text-center font-regular">
-              <span className="text-brand-dark dark:text-brand-light">AI-First Solutions for</span>
+              <span className="text-brand-dark dark:text-brand-light">Building for</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
                 {verticals.map((vertical, index) => (
@@ -72,10 +72,10 @@ export function Hero() {
 
             <div className="text-lg md:text-xl leading-relaxed tracking-tight text-brand-text dark:text-brand-muted max-w-3xl text-center">
               <p className="mb-4">
-                Building intelligent systems that transform industries. We combine advanced AI with expert engineering to deliver robust, scalable solutions at unprecedented speed.
+                We reimagine how technology empowers individuals and organizations through AI-powered vertical-specific solutions. We develop applications that serve as catalysts for human potential rather than substitutes for human agency.
               </p>
               <p className="text-brand-text/80 dark:text-brand-muted/80">
-                Our AI-first approach and deep industry expertise enable rapid development of sophisticated applications while maintaining enterprise-grade reliability.
+                Our network of autonomous production units delivers transformative products with unprecedented efficiency, enabling individuals to convert passive knowledge into active capability building.
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@ export function Hero() {
                 <span className="sr-only">LinkedIn</span>
               </Button>
             </Link>
-            <a href="mailto:contact@mentalic.ltd">
+            <a href="mailto:contact@mntlc.ltd">
               <Button 
                 variant="outline" 
                 size="icon" 

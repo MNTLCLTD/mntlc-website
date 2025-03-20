@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/tooltip"
 import { Linkedin, Send, Mail } from "lucide-react"
 import { LegalDialog } from "@/components/ui/legal-dialog"
+import Image from "next/image"
+import Link from "next/link"
 
 function Footerdemo() {
   const [email, setEmail] = React.useState("")
@@ -98,7 +100,7 @@ function Footerdemo() {
             <div>
               <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
               <address className="space-y-2 text-sm not-italic">
-                <p className="font-medium">MENTALIC GROUP LTD</p>
+                <p className="font-medium">MNTLC GROUP LTD</p>
                 <p>85 Great Portland Street</p>
                 <p>First Floor</p>
                 <p>London, W1W 7LT</p>
@@ -107,13 +109,13 @@ function Footerdemo() {
             </div>
             <div className="space-y-3">
               <a 
-                href="mailto:contact@mentalic.ltd"
+                href="mailto:contact@mntlc.ltd"
                 className="inline-flex items-center text-sm text-brand-text dark:text-brand-muted hover:text-brand-primary transition-colors group"
               >
                 <span className="flex h-8 w-8 items-center justify-center rounded-full border border-brand-primary/20 bg-brand-light/5 dark:bg-brand-dark/5 group-hover:bg-brand-primary/10 transition-colors mr-2">
                   <Mail className="h-4 w-4" />
                 </span>
-                contact@mentalic.ltd
+                contact@mntlc.ltd
               </a>
               <br />
               <a 
@@ -161,9 +163,17 @@ function Footerdemo() {
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-brand-light/10 dark:border-brand-dark/10 pt-8 text-center md:flex-row">
-          <div className="text-sm text-brand-text dark:text-brand-muted">
-            <p>© 2024 Mentalic Group Ltd. All rights reserved.</p>
-            <p className="mt-1">Company number: 14674642</p>
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-sm text-brand-text dark:text-brand-muted">
+            <Link href="/" className="flex items-center gap-2 mb-2 md:mb-0">
+              <div 
+                className="w-5 h-5 bg-[#002147]"
+                aria-label="Mental Tender Loving Care"
+              />
+            </Link>
+            <div>
+              <p>© 2024 MNTLC Group Ltd. All rights reserved.</p>
+              <p className="mt-1">Company number: 14674642</p>
+            </div>
           </div>
           <nav className="flex gap-6 text-sm">
             <LegalDialog 

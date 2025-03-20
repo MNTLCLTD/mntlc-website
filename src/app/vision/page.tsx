@@ -15,7 +15,7 @@ import { ContactSection } from "@/components/vision/ContactSection";
 import { BackgroundGrid } from "@/components/vision/BackgroundGrid";
 import { CompetitiveAdvantage } from "@/components/vision/CompetitiveAdvantage";
 
-export default function HomePage() {
+export default function VisionPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -173,4 +173,4 @@ export default function HomePage() {
       </AnimatePresence>
     </div>
   );
-}
+} 
